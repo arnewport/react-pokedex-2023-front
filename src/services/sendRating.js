@@ -1,6 +1,8 @@
+import { API_BASE_URL } from "../config";
+
 export const sendRating = async (id, rating) => {
     try {
-      const URL = "http://localhost:8080/api/pokemon/add";
+      const URL = `${API_BASE_URL}/api/pokemon/add`;
       const data = {
         id: id,
         rating: rating,

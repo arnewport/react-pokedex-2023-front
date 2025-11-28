@@ -1,6 +1,8 @@
-export const getRating = async (id) => { 
+import { API_BASE_URL } from "../config";
+
+export const getRating = async (id) => {
     try {
-        const URL = "http://localhost:8080/api/pokemon/rating/" + id;
+        const URL = `${API_BASE_URL}/api/pokemon/rating/` + id;
     
         const response = await fetch(URL);
         if (!response.ok) {

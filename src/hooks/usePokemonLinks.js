@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
+import { API_BASE_URL } from "../config";
 
 export default function usePokemonLinks(position) {
 
   // variables
   const LIMIT = 10;
   const URL = "https://pokeapi.co/api/v2/pokemon/";
-  const JP_URL = "http://localhost:8080/api/pokemon/";
+  const JP_URL = `${API_BASE_URL}/api/pokemon/`;
 
   // state
   const [loading, setLoading] = useState(true);
