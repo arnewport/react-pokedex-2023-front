@@ -13,6 +13,8 @@ export default function usePokemonLinks(position) {
   const [pokemonArray, setPokemonArray] = useState([]);
   const [linkArray, setLinkArray] = useState({ pokeLinks: [], japaneseLinks: [] });
 
+  useEffect(() => {
+
   // creates an array of links
   // array length = "LIMIT"
   // array values range from "position" to "position + LIMIT - 1"
@@ -27,7 +29,6 @@ export default function usePokemonLinks(position) {
       });
   }
 
-  useEffect(() => {
     updateLinks();
   }, [position]);
 
