@@ -22,15 +22,11 @@ export default function usePokemonLinks(position) {
     Array.from({ length: LIMIT }, (_, i) => baseURL + (position + i));
 
   // set the initial link arrays
-  const updateLinks = () => {
-    setLinkArray({
-        pokeLinks: createLinks(URL),
-        japaneseLinks: createLinks(JP_URL)
-      });
-  }
-
-    updateLinks();
-  }, [position]);
+  setLinkArray({
+      pokeLinks: createLinks(URL),
+      japaneseLinks: createLinks(JP_URL)
+    });
+  }, [position, JP_URL]);
 
   // fetch pokemon data to return
   useEffect(() => {
